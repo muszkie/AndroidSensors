@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.muszkie.project3.MainActivity">
+
+    <TextView
+        android:text="@string/notFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mLongitudeText"
+        android:layout_below="@+id/mLatitudeText"
+        android:layout_alignLeft="@+id/mLatitudeText"
+        android:layout_alignStart="@+id/mLatitudeText"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:text="@string/latitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mLongitudeText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/latitudeLable" />
+
+    <TextView
+        android:text="@string/longitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/mLongitudeText"
+        android:id="@+id/laongitudeLable" />
+
+    <TextView
+        android:text="@string/notFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mLatitudeText"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/laongitudeLable"
+        android:layout_toEndOf="@+id/laongitudeLable" />
+
+    <TextView
+        android:text="@string/notFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/lightSensorLable"
+        android:layout_alignLeft="@+id/mLongitudeText"
+        android:layout_alignStart="@+id/mLongitudeText"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:id="@+id/LightText" />
+
+    <TextView
+        android:text="@string/gyroscope"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:id="@+id/gyroscopeLable"
+        android:layout_below="@+id/lightSensorLable"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/xLable"
+        android:layout_below="@+id/gyroscopeLable"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/y"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/xLable"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/yLable" />
+
+    <TextView
+        android:text="@string/z"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/yLable"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/zLable" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/xLable"
+        android:layout_alignRight="@+id/lightSensorLable"
+        android:layout_alignEnd="@+id/lightSensorLable"
+        android:id="@+id/xText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/xText"
+        android:layout_alignRight="@+id/xText"
+        android:layout_alignEnd="@+id/xText"
+        android:id="@+id/yText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/yText"
+        android:layout_alignRight="@+id/xText"
+        android:layout_alignEnd="@+id/xText"
+        android:id="@+id/zText" />
+
+    <TextView
+        android:text="@string/compass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/compassLable"
+        android:layout_below="@+id/zLable"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/compassLable"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/compassText" />
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:id="@+id/map"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/toggleLightButton" />
+
+    <TextView
+        android:text="@string/lightSensor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:id="@+id/lightSensorLable"
+        android:layout_below="@+id/laongitudeLable"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ToggleButton
+        android:onClick="light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleLightButton"
+        android:layout_below="@+id/compassText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="21dp"
+        android:textOff="@string/lightOff"
+        android:textOn="@string/lightOn" />
+
+    <Button
+        android:text="@string/openMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/map"
+        android:onClick="openMap"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/MapOpen" />
+
+</RelativeLayout>
